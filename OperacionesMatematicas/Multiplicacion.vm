@@ -1,0 +1,23 @@
+//ejemplo de uso de funciones en VM
+//Multiplicacion a*b
+
+push constant 8
+pop temp 1
+push constant 4
+pop temp 2
+label loop
+	push temp 3
+	push temp 1
+	add
+	pop temp 3		//Temp 3 muestra resultado
+	push temp 2
+	push constant 1
+	sub 
+	pop temp 2
+	push temp 2
+	push constant 0
+	eq
+	if-goto end
+	goto loop
+
+label end

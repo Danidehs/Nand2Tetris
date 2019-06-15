@@ -1,0 +1,35 @@
+//ejemplo de uso de funciones en VM
+//Raiz Cuadrada 
+
+push constant 64
+pop temp 1
+push constant 8
+pop temp 2
+
+label loop
+	push temp 1
+	push temp 2
+	sub
+	pop temp 1
+	push temp 1
+	push constant 0
+	lt
+	if-goto end
+	push temp 3
+	push constant 1
+	add 		
+	pop temp 3
+	goto loop
+
+label end
+
+label loop2
+
+	push temp 2
+	push temp 3
+	eq
+	if-goto end2
+
+label end2
+	push temp 3
+	pop temp 4  //Temp 4 muestra el resultado

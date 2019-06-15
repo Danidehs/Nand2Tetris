@@ -1,0 +1,22 @@
+//ejemplo de uso de funciones en VM
+//Division a/b
+
+push constant 30
+pop temp 1
+push constant 6
+pop temp 2
+label loop
+	push temp 1
+	push temp 2
+	sub
+	pop temp 1
+	push temp 1
+	push constant 0
+	lt
+	if-goto end
+	push temp 3
+	push constant 1
+	add 		
+	pop temp 3 //Temp 3 muestra resultado
+	goto loop
+label end
